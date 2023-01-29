@@ -1,0 +1,28 @@
+
+
+
+
+<div class="form">
+
+  <h1 style="text-align: center;">FACEBOOK LIKE APP</h1>
+
+  <div>
+    <label>AUTORE:</label>
+    <input #nautore>
+  </div>
+
+  <div>
+    <label>TESTO:</label>
+    <input #ntesto>
+  </div>
+
+  <button (click)="aggiungi(nautore, ntesto)"> CARICA POST </button>
+
+</div>
+
+<h1>POST:</h1>
+
+<div>
+  <app-post *ngFor="let ps of sortedPost()" [post]="ps"></app-post>
+</div>
+

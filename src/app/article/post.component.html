@@ -1,0 +1,18 @@
+
+<div class="form">
+  
+  <p>AUTORE:</p>
+  <div class="content">
+    <a>  {{ post.autore }} </a>
+  </div>
+
+<p>TESTO:</p>
+  <div class="content">
+    <a> {{ post.testo }} </a>
+  </div>
+
+  <div>
+    <h3> <button (click)="miPiace()">LIKE</button>  {{ post.like }} likes </h3>
+
+  </div>
+</div>

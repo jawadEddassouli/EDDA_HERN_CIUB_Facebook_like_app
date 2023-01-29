@@ -1,0 +1,40 @@
+input{
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: black;
+    font-weight: 100;
+    font-size: 17px;
+    margin: 10px;
+    min-height: fit-content ;
+}
+
+button{
+    margin-top: 35px;
+    border: 1px solid black;
+    font-size: 17px;
+    padding: 20px 15px ;
+    border-radius: 60px;
+    font-weight: 100;
+}  
+
+
+.form{
+  display: inline-block;
+  max-width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 40px;
+  margin: 40px 0;
+  left: 50%;
+}  
+
+input:hover{
+    background-color: lightskyblue;
+}
+
+button:hover{
+    background-color: lightskyblue;
+}
