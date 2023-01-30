@@ -10,7 +10,8 @@ import { Post } from './post.model'; //Non cancellare gli altri import
 
 export class PostComponent implements OnInit {
   @Input() post:Post;
-
+  show : boolean = false;
+  lungezza : number = 0;
   constructor() {
   }
 
@@ -18,7 +19,17 @@ export class PostComponent implements OnInit {
     this.post.miPiace(); //Modificato qui 
     return false;
   }
-
+  mostra(){
+    this.show = !this.show;
+  }
+  aggiungiCommento(commento : HTMLInputElement){
+    this.contaCommenti()
+    this.post.commenti.push(commento.value)
+    console.log(this.post.commenti)
+  }
   ngOnInit() {}
+  contaCommenti(){
+    this.lungezza = this.post.commenti.length +1 
+  }
 }
 
