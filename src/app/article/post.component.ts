@@ -26,6 +26,8 @@ export class PostComponent implements OnInit {
     this.contaCommenti()
     this.post.commenti.push(commento.value)
     console.log(this.post.commenti)
+
+    commento.value = '';
   }
   ngOnInit() {}
   contaCommenti(){

@@ -13,13 +13,13 @@
 
   <div>
     <h3> <button (click)="miPiace()">LIKE</button>  {{ post.like }} likes </h3>
-    <button (click)="mostra()">mostra</button>
+
+    <h3>{{lungezza}} commenti<button (click)="mostra()">COMMENTA</button></h3>
   </div>
   <ng-container *ngIf="show">
     <h3>Aggiungi Commento</h3>
-    <p>Commento</p>
     <input type="text" name="desc" #newcommento>
-    <h3><button (click)="aggiungiCommento(newcommento)">Aggiungi commento</button><h1>{{lungezza}}</h1></h3>
+    <button (click)="aggiungiCommento(newcommento)">Aggiungi commento</button>
     <app-com *ngFor="let com of this.post.commenti" [commenti] = 'com'></app-com>
 </ng-container>
 </div>
