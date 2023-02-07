@@ -12,6 +12,6 @@ export class Post {
     }
  
     miPiace(): void {
-        this.like += 1;
-      }
+      this.like += 1;
+    }
 }

@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Post } from './article/post.model'; 
+
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,18 @@ import { Post } from './article/post.model';
 })
 export class AppComponent {
   title = 'EDDA_HERN_CIUB_Facebook_like_app';
+ 
 
   post:Post[];   // <-- component property
-  constructor(){
+  constructor(public http: HttpClient){
     this.post = [new Post('JAWAD', 'ciao a tutti', 1)];
+    this.http.get<any>('https://my-json-server.typicode.com/jawadEddassouli/FACEBOOK/post').subscribe((response) =>{
+  
+      for(let a of response){
+        this.post.push(new Post(a['autore'],a['testo'],a['like'],a['commenti']))
+      }
+  
+    });
   }
 
   
